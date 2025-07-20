@@ -1,0 +1,192 @@
+Product Inventory Management System
+
+**Java, Spring Boot, and MySQL.**
+
+	
+
+	**single entity     the Product,    id   product name	category	quantity	price	 status	  and  	timestamps** 
+
+
+
+	**CRUD operations		 REST APIs,	Postman,	MySQL database using Spring Data JPA.**
+
+
+
+process to create project
+
+Design a product entity
+
+Set up your Spring Boot project
+
+Connect to a MySQL database
+
+Build RESTful APIs
+
+Test endpoints in Postman
+
+
+Dependency
+
+
+1. Spring Data JPA
+
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-data-jpa</artifactId>
+</dependency>
+
+Note: For interacting with the database using JPA (ORM-based approach).
+
+
+
+2. Spring Web
+
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-web</artifactId>
+</dependency>
+
+Note: For building REST APIs and handling HTTP requests.
+
+
+
+3. Spring Boot DevTools (Optional for Live Reload)
+
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-devtools</artifactId>
+    <scope>runtime</scope>
+</dependency>
+
+Note: Helps in live-reloading during development.
+
+
+
+
+4.MySQL Connector
+
+<dependency>
+ 	<groupId>com.mysql</groupId>
+ 	<artifactId>mysql-connector-java</artifactId>
+ 	<scope>runtime</scope>
+</dependency>
+
+Note: For connecting to a MySQL database.
+
+
+
+
+5. Lombok (Optional for cleaner code)
+
+<dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+    <optional>true</optional>
+</dependency>
+
+Note: For auto-generating getters, setters, constructors, etc.
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+src/main/resources
+application.properties
+
+ 	spring.datasource.url=jdbc:mysql://localhost:3306/Product_Inventry_System?createDatabaseIfNotExist=true
+ 	spring.datasource.username=root
+ 	spring.datasource.password=admin
+ 	spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+ 	spring.jpa.hibernate.ddl-auto=update
+ 	spring.jpa.show-sql=true
+ 	spring.jpa.properties.hibernate.format_sql=true
+ 	spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+
+
+
+
+Package Requirement
+ 	entity
+ 	repository
+ 	dao
+ 	service
+ 	controller
+ 	exception
+
+
+----------------------------------------------------------------------------------
+
+
+Json Input Data
+
+
+{
+  "name": "HP Laptop",
+  "category": "Electronics",
+  "quantity": 10,
+  "price": 55999.99,
+  "status": "Available"
+}
+{
+  "name": "Samsung Galaxy M14",
+  "category": "Mobile",
+  "quantity": 25,
+  "price": 13999.00,
+  "status": "Available"
+}
+{
+  "name": "Sony Headphones",
+  "category": "Accessories",
+  "quantity": 40,
+  "price": 2999.50,
+  "status": "Available"
+}
+{
+  "name": "Dell Monitor",
+  "category": "Electronics",
+  "quantity": 12,
+  "price": 10499.00,
+  "status": "Out of Stock"
+}
+{
+  "name": "Asus Keyboard",
+  "category": "Accessories",
+  "quantity": 30,
+  "price": 1999.00,
+  "status": "Available"
+}
+{
+  "name": "Apple iPhone 14",
+  "category": "Mobile",
+  "quantity": 8,
+  "price": 74999.00,
+  "status": "Available"
+}
+
+{
+  "name": "Lenovo Mouse",
+  "category": "Accessories",
+  "quantity": 50,
+  "price": 899.00,
+  "status": "Available"
+}
+{
+  "name": "Canon DSLR Camera",
+  "category": "Electronics",
+  "quantity": 5,
+  "price": 42999.00,
+  "status": "Limited Stock"
+}
+{
+  "name": "Sandisk 64GB Pendrive",
+  "category": "Storage",
+  "quantity": 100,
+  "price": 599.00,
+  "status": "Available"
+}
+{
+  "name": "Mi Smart Band 6",
+  "category": "Wearable",
+  "quantity": 22,
+  "price": 2499.00,
+  "status": "Available"
+}
